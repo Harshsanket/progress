@@ -10,7 +10,7 @@ const Visuals: React.FC = () => {
 
   // Calculate progress percentages
   const calculateProgress = () => {
-    const now = new Date();
+    const now:any = new Date();
 
     // Day progress
     const dayProgress = Math.round(
@@ -44,7 +44,7 @@ const Visuals: React.FC = () => {
     );
 
     // Year progress
-    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const startOfYear:any = new Date(now.getFullYear(), 0, 1);
     const yearProgress = Math.round(
       ((now - startOfYear) / (365.25 * 24 * 3600 * 1000)) * 100
     );
